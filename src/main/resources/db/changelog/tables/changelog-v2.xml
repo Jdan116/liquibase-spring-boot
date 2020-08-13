@@ -5,9 +5,12 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <include file="db/changelog/changelog-v1.xml"/>
-    <include file="db/changelog/changelog-v2.xml"/>
-    <include file="db/changelog/changelog-v3.xml"/>
-    <includeAll path="db/changelog/insert"/>
-    <includeAll path="db/changelog/tables"/>
+    <changeSet author="dickson-the-developer" id="2">
+        <createTable
+                schemaName="liquibase"
+                tableName="Payment"
+                tablespace="A String">
+            <column name="number-plate" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
 </databaseChangeLog>
